@@ -86,7 +86,53 @@ def nostrilDrawing(x,y):
     turtle.color("#f48cc8")
     turtle.stamp()
 
+def earDrawing():
+    turtle.shape("classic")
+    turtle.penup()
+    turtle.goto(-70,145)
+    turtle.pendown()
+    turtle.fillcolor("#ffacdc")
+    turtle.begin_fill()
+    turtle.setheading(150)
+    for i in range(20):
+        turtle.forward(2)
+        turtle.right(1.3)
+    for i in range (55):
+        turtle.right(2.9)
+        turtle.forward(1)
+    for i in range(18):
+        turtle.forward(2)
+        turtle.right(1.4)
+    turtle.end_fill()
 
+    #right ear
+    turtle.penup()
+    turtle.goto(-27,185)
+    turtle.setheading(130)
+    turtle.pendown()
+    turtle.begin_fill()
+    for i in range(18):
+        turtle.forward(2)
+        turtle.right(1.1)
+
+    for i in range (53):
+        turtle.right(3.3)
+        turtle.forward(1)
+
+    for i in range(17):
+        turtle.forward(2)
+        turtle.right(1.4)
+
+    turtle.end_fill()
+
+def blush():
+    turtle.penup()
+    turtle.goto(-50, 80)
+    turtle.pendown()
+    turtle.shape("circle")
+    turtle.color("#ff72c6")
+    turtle.shapesize(3)
+    turtle.stamp()
 
 
 groundDrawing(-300,-250)
@@ -94,5 +140,7 @@ draw_dress()
 headDrawing()
 nostrilDrawing(120,185)
 nostrilDrawing(135,188)
+earDrawing()
+blush()
 
 turtle.exitonclick()
